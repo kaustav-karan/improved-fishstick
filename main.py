@@ -7,6 +7,8 @@ print("5. Power")
 
 import Addition
 import Subtraction
+import Division
+import Multiplication
 
 operation = input("Enter choice (1/2/3/4/5): ")
 
