@@ -4,6 +4,7 @@ import Division
 import Multiplication
 import Increment
 import Decrement
+import math
 
 print("Select operation.")
 print("1. Add")
@@ -13,8 +14,10 @@ print("4. Divide")
 print("5. Power")
 print("6. Increment")
 print("7. Decrement")
+print("8. Square Root")
+print("9. Modulo")
 
-operation = input("Enter choice (1/2/3/4/5/6/7): ")
+operation = input("Enter choice (1/2/3/4/5/6/7/8/9): ")
 
 match operation:
     case '1':
@@ -53,5 +56,14 @@ match operation:
         num1 = float(input("Enter number: "))
         result = Decrement.decrement(num1)
         print(f"The result of decrement is: {result}")
+    case '8':
+        num1 = float(input("Enter number: "))
+        result = math.sqrt(num1)
+        print(f"The square root of {num1} is: {result}")
+    case '9':
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: ")) 
+        result = num1 % num2
+        print(f"The result of modulo is: {result}")
     case _:
         print("Invalid input! Please select a valid operation.")
